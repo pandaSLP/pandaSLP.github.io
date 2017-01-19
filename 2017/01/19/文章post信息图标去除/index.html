@@ -84,17 +84,17 @@
 
 
 
-<meta name="description" content="通过hexo搭建个人博客有一段时间了，用的是Next主题，比较喜欢这种简约、大气的风格，唯一有点不爽的是，在文章的post信息一栏有几个讨人厌的小图标，像下图这样：  看页面源码，原来是用的Font Awesome，，在Next主题的文件夹里扒拉了半天，终于找到了修改的地方，贴出来供大家参考。">
+<meta name="description" content="通过hexo搭建个人博客有一段时间了，用的是Next主题，比较喜欢这种简约、大气的风格，唯一有点不爽的是，在文章的post信息一栏有几个讨人厌的小图标，像下图这样：  看页面源码，原来是用的Font Awesome，&amp;lt;i class=&amp;quot;fa fa-calendar-o&amp;quot;&amp;gt;&amp;lt;/i&amp;gt;，在Next主题的文件夹里扒拉了半天，终于找到了修改的地方，贴出来供大家">
 <meta property="og:type" content="article">
 <meta property="og:title" content="hexo Next主题文章post信息去除图标">
 <meta property="og:url" content="http://yoursite.com/2017/01/19/文章post信息图标去除/index.html">
 <meta property="og:site_name" content="thinking">
-<meta property="og:description" content="通过hexo搭建个人博客有一段时间了，用的是Next主题，比较喜欢这种简约、大气的风格，唯一有点不爽的是，在文章的post信息一栏有几个讨人厌的小图标，像下图这样：  看页面源码，原来是用的Font Awesome，，在Next主题的文件夹里扒拉了半天，终于找到了修改的地方，贴出来供大家参考。">
+<meta property="og:description" content="通过hexo搭建个人博客有一段时间了，用的是Next主题，比较喜欢这种简约、大气的风格，唯一有点不爽的是，在文章的post信息一栏有几个讨人厌的小图标，像下图这样：  看页面源码，原来是用的Font Awesome，&amp;lt;i class=&amp;quot;fa fa-calendar-o&amp;quot;&amp;gt;&amp;lt;/i&amp;gt;，在Next主题的文件夹里扒拉了半天，终于找到了修改的地方，贴出来供大家">
 <meta property="og:image" content="https://github.com/pandaSLP/MarkdownPhotos/raw/master/photos/post.png">
-<meta property="og:updated_time" content="2017-01-19T14:24:01.239Z">
+<meta property="og:updated_time" content="2017-01-19T15:23:32.548Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hexo Next主题文章post信息去除图标">
-<meta name="twitter:description" content="通过hexo搭建个人博客有一段时间了，用的是Next主题，比较喜欢这种简约、大气的风格，唯一有点不爽的是，在文章的post信息一栏有几个讨人厌的小图标，像下图这样：  看页面源码，原来是用的Font Awesome，，在Next主题的文件夹里扒拉了半天，终于找到了修改的地方，贴出来供大家参考。">
+<meta name="twitter:description" content="通过hexo搭建个人博客有一段时间了，用的是Next主题，比较喜欢这种简约、大气的风格，唯一有点不爽的是，在文章的post信息一栏有几个讨人厌的小图标，像下图这样：  看页面源码，原来是用的Font Awesome，&amp;lt;i class=&amp;quot;fa fa-calendar-o&amp;quot;&amp;gt;&amp;lt;/i&amp;gt;，在Next主题的文件夹里扒拉了半天，终于找到了修改的地方，贴出来供大家">
 <meta name="twitter:image" content="https://github.com/pandaSLP/MarkdownPhotos/raw/master/photos/post.png">
 
 
@@ -323,9 +323,7 @@
         <div class="post-meta">
           <span class="post-time">
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
+			  
               <span class="post-meta-item-text">发表于</span>
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-01-19T21:44:24+08:00">
                 2017-01-19
@@ -393,7 +391,8 @@
       
 
       
-        <p>  通过hexo搭建个人博客有一段时间了，用的是<a href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="external">Next</a>主题，比较喜欢这种简约、大气的风格，唯一有点不爽的是，在文章的post信息一栏有几个讨人厌的小图标，像下图这样：<br><img src="https://github.com/pandaSLP/MarkdownPhotos/raw/master/photos/post.png" alt="tool-editor"><br>  看页面源码，原来是用的Font Awesome，<i class="fa fa-calendar-o"></i>，在Next主题的文件夹里扒拉了半天，终于找到了修改的地方，贴出来供大家参考。</p>
+        <p>  通过hexo搭建个人博客有一段时间了，用的是<a href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="external">Next</a>主题，比较喜欢这种简约、大气的风格，唯一有点不爽的是，在文章的post信息一栏有几个讨人厌的小图标，像下图这样：<br><img src="https://github.com/pandaSLP/MarkdownPhotos/raw/master/photos/post.png" alt="tool-editor"><br>  看页面源码，原来是用的Font Awesome，<code>&lt;i class=&quot;fa fa-calendar-o&quot;&gt;&lt;/i&gt;</code>，在Next主题的文件夹里扒拉了半天，终于找到了修改的地方，贴出来供大家参考。<br>  只需要找到 <em>themes\next\layout_macro\post.swig</em> 文件，找到对应的span标签，注释掉即可，比如想去掉发表日期前面的小日历图标，就把下面这块代码删除或者注释掉就行了。<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"post-meta-item-icon"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"fa fa-calendar-o"</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">span</span>&gt;</span>`</div></pre></td></tr></table></figure></p>
+<p>  同理，其他地方的布局和内容也可以修改的个性化一些噢。              </p>
 <h2 id=""><a href="#" class="headerlink" title="  "></a>  <a id="more"></a></h2>
       
     </div>
